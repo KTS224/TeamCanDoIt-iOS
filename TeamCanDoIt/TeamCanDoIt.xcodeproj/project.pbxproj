@@ -12,6 +12,9 @@
 		EB093D332B2DAF7B009A6D2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB093D322B2DAF7B009A6D2E /* Preview Assets.xcassets */; };
 		EB093D3B2B2DB1AB009A6D2E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB093D3A2B2DB1AB009A6D2E /* LoginView.swift */; };
 		EB093D3D2B2DC3ED009A6D2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB093D3C2B2DC3ED009A6D2E /* WelcomeView.swift */; };
+		EB4036312B4163B9001A2365 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EB4036302B4163B9001A2365 /* ConfettiSwiftUI */; };
+		EB4036332B4167EA001A2365 /* AskTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4036322B4167EA001A2365 /* AskTeamView.swift */; };
+		EB4036352B417065001A2365 /* MakeTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4036342B417065001A2365 /* MakeTeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,8 @@
 		EB093D322B2DAF7B009A6D2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB093D3A2B2DB1AB009A6D2E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EB093D3C2B2DC3ED009A6D2E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		EB4036322B4167EA001A2365 /* AskTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskTeamView.swift; sourceTree = "<group>"; };
+		EB4036342B417065001A2365 /* MakeTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4036312B4163B9001A2365 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +80,8 @@
 			children = (
 				EB093D3A2B2DB1AB009A6D2E /* LoginView.swift */,
 				EB093D3C2B2DC3ED009A6D2E /* WelcomeView.swift */,
+				EB4036322B4167EA001A2365 /* AskTeamView.swift */,
+				EB4036342B417065001A2365 /* MakeTeamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +102,9 @@
 			dependencies = (
 			);
 			name = TeamCanDoIt;
+			packageProductDependencies = (
+				EB4036302B4163B9001A2365 /* ConfettiSwiftUI */,
+			);
 			productName = TeamCanDoIt;
 			productReference = EB093D282B2DAF7A009A6D2E /* TeamCanDoIt.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +133,9 @@
 				Base,
 			);
 			mainGroup = EB093D1F2B2DAF7A009A6D2E;
+			packageReferences = (
+				EB40362F2B4163B8001A2365 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = EB093D292B2DAF7A009A6D2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB093D3B2B2DB1AB009A6D2E /* LoginView.swift in Sources */,
+				EB4036352B417065001A2365 /* MakeTeamView.swift in Sources */,
+				EB4036332B4167EA001A2365 /* AskTeamView.swift in Sources */,
 				EB093D3D2B2DC3ED009A6D2E /* WelcomeView.swift in Sources */,
 				EB093D2C2B2DAF7A009A6D2E /* TeamCanDoItApp.swift in Sources */,
 			);
@@ -356,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB40362F2B4163B8001A2365 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB4036302B4163B9001A2365 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB40362F2B4163B8001A2365 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EB093D202B2DAF7A009A6D2E /* Project object */;
 }

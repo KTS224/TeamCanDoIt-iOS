@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct WelcomeView: View {
+    
+    @State private var counter: Int = 0
+    
     var body: some View {
         VStack {
             Spacer()
@@ -28,6 +32,7 @@ struct WelcomeView: View {
                         .offset(y: -80)
                         .font(.system(size: 19))
                         .fontWeight(.light)
+                        .confettiCannon(counter: $counter)
                 }
                 
                 
@@ -50,9 +55,9 @@ struct WelcomeView: View {
             
             Spacer()
             
-            Button(action: {
-                
-            }, label: {
+            NavigationLink {
+                AskTeamView().navigationBarBackButtonHidden(true)
+            } label: {
                 Text("시작하기")
                     .bold()
                     .foregroundColor(.white)
@@ -60,7 +65,14 @@ struct WelcomeView: View {
                     .frame(maxWidth: UIScreen.main.bounds.width - 50)
                     .background(LinearGradient(gradient: Gradient(colors: [.accentColor, .accentColorgd]), startPoint: .leading, endPoint: .trailing))
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-            })
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+              // 1초 후 실행될 부분
+                counter += 1
+            }
+            
         }
     }
 }
